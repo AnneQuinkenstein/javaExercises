@@ -16,5 +16,8 @@ public class TestCake {
         System.out.println("Wedding cake flavor: " + weddingCake.getFlavor());
         System.out.println("Wedding cake price: " + weddingCake.getPrice());
 
+        Cake secondCake = new Cake("cherry");
+        System.out.println("This cakes flavor is " + secondCake.getFlavor());
+
     }
 }
