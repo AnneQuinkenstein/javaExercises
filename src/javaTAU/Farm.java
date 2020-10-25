@@ -6,7 +6,7 @@ public class Farm {
 
         Animals piggy = new Pig();
     piggy.makeSound();
-    
+
     Animals quacki = new Duck();
     quacki.eat();
     quacki.makeSound();
