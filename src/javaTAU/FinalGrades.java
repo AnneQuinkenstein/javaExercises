@@ -1,5 +1,7 @@
 package javaTAU;
 
+import java.util.Map;
+
 public class FinalGrades {
 
     /*
@@ -9,11 +11,18 @@ public class FinalGrades {
 
     public static void main(String args[]){
         Map <String, Integer> firstGrades = TestResults.getOriginalGrades();
-        Map <String, Integer> finalGrades = TestResults.getMakeUpGrades();
+        Map <String, Integer> secondGrades = TestResults.getMakeUpGrades();
 
         for (var student : firstGrades.entrySet()){
             Integer firstGrade = firstGrades.get(student.getKey());
+            Integer secondGrade = secondGrades.get(student.getKey());
+
+           if (firstGrade > secondGrade ) {
+               secondGrades.put(student.getKey(), firstGrade);
+           }
         }
+        secondGrades.forEach(
+                (k,v)->System.out.println("Student: " + k + ", Grade: " + v));
 
     }
 }
